@@ -5,6 +5,8 @@ import datetime
 
 db = SQLAlchemy()
 
+# Locations table
+
 
 class Location(db.Model):
     __tablename__ = 'locations'
@@ -25,6 +27,8 @@ class Location(db.Model):
             'city': self.city,
             'state': self.state
         }
+
+# Incidents/Emergencies table
 
 
 class Incident(db.Model):
@@ -67,6 +71,7 @@ class Incident(db.Model):
         }
 
 
+# Users and tips many-to-many table
 users_tips = db.Table(
     'users_tips',
     db.Column('user_id',
@@ -85,6 +90,8 @@ users_tips = db.Table(
               default=datetime.datetime.utcnow,
               nullable=False)
 )
+
+# Users table
 
 
 class User(db.Model):
@@ -123,6 +130,7 @@ class User(db.Model):
         }
 
 
+# Users and content many-to-many table
 users_content = db.Table(
     'users_content',
     db.Column('user_id',
@@ -140,6 +148,8 @@ users_content = db.Table(
               default=datetime.datetime.utcnow,
               nullable=False)
 )
+
+# Content table
 
 
 class Content(db.Model):
@@ -173,6 +183,8 @@ class Content(db.Model):
             'filtered': self.filtered,
             'user_id': self.user_id
         }
+
+# Incident/Emergency Tips table
 
 
 class Tip(db.Model):

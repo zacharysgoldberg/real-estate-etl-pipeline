@@ -39,6 +39,8 @@ def create():
 
     return jsonify(content.serialize())
 
+# Delete content
+
 
 @bp.route('/<int:id>', methods=['DELETE'])
 def delete(id: int):

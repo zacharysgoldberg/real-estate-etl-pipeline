@@ -55,7 +55,7 @@ def create():
         incident_id=db.session.query(Incident.id).order_by(
             Incident.id.desc()).first()[0] + 1
     )
-
+    # Inserting new incident/emergency tip to incidents table
     incident = sqlalchemy.insert(Incident).values(
         city=tip.city, state=tip.state, incident_type=tip.incident_type,
         description=tip.description, ongoing=None,
