@@ -3,18 +3,18 @@ Emergeny Calls
 | Description |
 | ----------- |
 
-A backend project that updates users on emergencies/incidents, similar to Citizen. However, users are able to submit tips relating to emergencies/incidents as well as upload related video, image, and sound content.
+First backend project using Flask that stores national emergencies/incidents, similar to Citizen. Users are able to submit tips relating to emergencies/incidents as well as upload related video, image, and sound content.
 
 The project began as a simple database to store and manipulate 911 emergency call data sets. After ataining a deeper understanding of ORM and endpoint paths, I decided to include a tips feature that can include the personal info of the user submitting the tip or to remain anonymous. This addittion inherently changes the results of the data sets and adds more nuances to the details surounding them.
 
 | Design |
 | ------ |
 
-I chose to use an ORM approach in this project to not only get more practice with it but because this project does not inlcude any significant amount of numerical data. Thus, raw SQL is not necessary to achieve the desired results that this project is aiming for.
+I chose to use the ORM approach to not only get more practice with it but because this project does not inlcude any significant amount of numerical data. Thus, raw SQL is not necessary to achieve the desired results that this project is aiming for.
 
-Currently, this project only contains fake data. Data is manipulated significantly during the population phase to add authenticity.
+Currently, the database only contains fake data until database structure is more optimized.
 
-Future improvements include a friendly UI, the ability to upload real content and real data sets, and better user account sign up / login features.
+Future improvements include a friendly UI, the ability to upload real content, data sets, and user account sign up / login features.
 
 | API ENDPOINTS: |
 | -------------- |
