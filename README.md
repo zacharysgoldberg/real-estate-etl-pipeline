@@ -4,7 +4,7 @@
 
 First backend project using Flask that stores and maps national emergencies/incidents, similar to Citizen. Users are able to submit tips related to emergencies/incidents as well as upload related video, image, and sound content.
 
-The project began as a simple database to store and manipulate 911 emergency call data sets. After attaining a deeper understanding of ORM and endpoint paths, I decided to include a tips feature that allows users to submit anonymous or non-anonymous incident/emergency tips for authorities to see or to be reported. This addition inherently changes the results of the data sets and adds more nuances to the details surrounding them.
+The project began as a simple database to store and manipulate 911 emergency call data sets. After attaining a deeper understanding of SQL and endpoint paths, I decided to include a tips feature that allows users to submit anonymous or non-anonymous incident/emergency tips for authorities to see or to be reported. This addition inherently changes the results of the data sets and adds more nuances to the details surrounding them.
 
 **--Design--**
 
