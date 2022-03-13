@@ -8,7 +8,7 @@ The project began as a simple database to store and manipulate 911 emergency cal
 
 **--Design--**
 
-I chose to use the ORM approach to not only get more practice with it but because this project does not inlcude a significant amount of numerical data. Thus, raw SQL is not necessary to achieve the desired results that this project is aiming for.
+I chose to use the ORM approach for its simplicity and portability. May switch it over to raw SQL in near future as data queries become more complex.
 
 Currently, the database only contains fake data until database structure is better optimized.
 
