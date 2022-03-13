@@ -2,14 +2,14 @@
 Populate twitter database with fake data using the SQLAlchemy ORM.
 """
 
-from emergency_calls.src import create_app
-from emergency_calls.src.models import User, Tip, Content, Location, Incident, users_tips, users_content, db
+from emergency_map.src import create_app
+from emergency_map.src.models import User, Tip, Content, Location, Incident, users_tips, users_content, db
 from faker import Faker
 import random
 import string
 import hashlib
 import secrets
-from emergency_calls.src.data_sets import content_types, cities_states, incident_types
+from emergency_map.src.data_sets import content_types, cities_states, incident_types
 import sqlalchemy
 
 
