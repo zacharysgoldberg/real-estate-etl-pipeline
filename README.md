@@ -14,7 +14,7 @@ I chose to use the ORM approach to not only get more practice with it but becaus
 
 Currently, the database only contains fake data until database structure is better optimized.
 
-Future improvements include a geolocation mapping and UI, the ability to upload real content, data sets, and user account sign up / login features.
+Future improvements include geolocation mapping and UI, the ability to upload real content, data sets, and user account sign up / login features.
 
 **API ENDPOINTS:**
 
