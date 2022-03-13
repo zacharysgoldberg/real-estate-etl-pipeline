@@ -1,6 +1,4 @@
-# **--Title--**
-
-Emergeny Map
+# **Emergeny Map**
 
 **--Description--**
 
