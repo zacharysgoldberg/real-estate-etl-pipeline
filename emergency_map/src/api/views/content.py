@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, abort, request
-from ..models import User, Content, db
-from ..data_sets import content_types
+from ..models.models import User, db, Content
+from ...data_sets import content_types
 
 bp = Blueprint('content', __name__, url_prefix='/content')
 

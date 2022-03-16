@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, abort, request
-from ..models import User, Location, db
+from ..models.models import Location, db
 
 bp = Blueprint('locations', __name__, url_prefix='/locations')
 

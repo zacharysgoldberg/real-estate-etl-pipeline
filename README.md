@@ -1,6 +1,4 @@
-**--Title--**
-
-Emergeny Map
+# Emergeny Map
 
 **--Description--**
 
@@ -10,11 +8,13 @@ The project began as a simple database to store and manipulate 911 emergency cal
 
 **--Design--**
 
-I chose to use the ORM approach to not only get more practice with it but because this project does not inlcude any significant amount of numerical data. Thus, raw SQL is not necessary to achieve the desired results that this project is aiming for.
+I chose to use the ORM approach for its simplicity and portability. May switch it over to raw SQL in near future as data queries become more complex.
 
 Currently, the database only contains fake data until database structure is better optimized.
 
-Future improvements include geolocation mapping and UI, the ability to upload real content, data sets, and user account sign up / login features.
+**--Future Improvements--**
+
+Will include geolocation mapping and UI, the ability to upload real content, data sets, and user account sign up / login features.
 
 **API ENDPOINTS:**
 

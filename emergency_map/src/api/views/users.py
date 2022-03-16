@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, abort, request
-from ..models import User, db, Content, users_content
+from ..models.models import Content, users_content, User, db
 import hashlib
 import secrets
 import sqlalchemy

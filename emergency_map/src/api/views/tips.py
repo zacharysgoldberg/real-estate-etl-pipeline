@@ -1,6 +1,5 @@
 from flask import Blueprint, jsonify, abort, request
-from ..models import User, Tip, db, Location, Incident
-import random
+from ..models.models import Tip, db, Location, Incident, User
 from faker import Faker
 from datetime import datetime
 import sqlalchemy

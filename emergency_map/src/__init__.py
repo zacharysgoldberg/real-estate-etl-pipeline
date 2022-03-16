@@ -1,8 +1,11 @@
 import os
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
 # https://flask.palletsprojects.com/en/2.0.x/patterns/appfactories/
+
+db = SQLAlchemy()
 
 
 def create_app(test_config=None):
@@ -27,11 +30,10 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    from .models import db
     db.init_app(app)
     migrate = Migrate(app, db)
 
-    from .api import users, locations, tips, incidents, content
+    from src.api.views import users, locations, tips, incidents, content
     app.register_blueprint(users.bp)
     app.register_blueprint(locations.bp)
     app.register_blueprint(tips.bp)

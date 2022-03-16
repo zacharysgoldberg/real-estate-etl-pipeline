@@ -1,9 +1,9 @@
 """
-Populate twitter database with fake data using the SQLAlchemy ORM.
+Populating emergency_map database with fake data using the SQLAlchemy ORM.
 """
 
 from emergency_map.src import create_app
-from emergency_map.src.models import User, Tip, Content, Location, Incident, users_tips, users_content, db
+from emergency_map.src.api.models.models import User, Tip, Content, Location, Incident, users_tips, users_content, db
 from faker import Faker
 import random
 import string
@@ -136,6 +136,7 @@ def main():
             description=fake.sentence() if random.choice(boolean) == True else None
         )
 
+        # Inserting new tip into incidents table
         tip = sqlalchemy.insert(Incident).values(
             coordinates=last_tip.coordinates,
             city=last_tip.city, state=last_tip.state, incident_type=last_tip.incident_type,
