@@ -13,7 +13,7 @@ Currently, the database only contains fake data until database structure is bett
 
 **--Future Improvements--**
 
-Will include geolocation mapping and UI, the ability to upload real content, data sets, and user account sign up / login features.
+Will include geolocation mapping GUI, the ability to upload real content, data, and user account sign up / login features.
 
 **API ENDPOINTS:**
 
