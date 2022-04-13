@@ -2,10 +2,10 @@
 
 **--Description--**
 
-First backend project using Flask that stores and maps national emergencies/incidents, similar to Citizen. Users are able to submit tips related to emergencies/incidents as well as upload related video, image, and sound content.
+Stores and maps national emergencies/incidents, similar to Citizen. Users are able to submit tips related to emergencies/incidents as well as upload related video, image, and sound content.
 
 **--Design--**
-Initial design decisions turned out to be too ambitous due to certain data points not being realistically attainable, such as, creating a table/column for users that maitnained a history of recent incidents/tips updates.
+Initial design turned out to be too ambitous due to certain data points not being realistically attainable, such as, creating a table/column for users that maitnained a history of recent incidents/tips updates.
 
 I chose to use the ORM approach for its simplicity and portability but may switch over to raw SQL in near future as data queries become more complex.
 
@@ -13,7 +13,7 @@ Currently, the database only contains fake data until database structure is bett
 
 **--Future Improvements--**
 
-Will include geolocation mapping GUI, the ability to upload real content, data, and user account sign up / login features.
+To include geolocation mapping GUI, the ability to upload real content, data, and user account sign up / login features.
 
 **API ENDPOINTS:**
 
