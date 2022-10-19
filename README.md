@@ -5,15 +5,13 @@
 Extracts, parses, and stores crime data relating to anonymous tips, emergencies/incidents as well as video, image, and sound data.
 
 **--Design--**
-Initial design turned out to be too ambitous due to certain data points not being realistically attainable, such as, creating a table/column for users that maitnained a history of recent incidents/tips updates.
+ORM was used  for its simplicity and portability but may switch over to raw SQL in near future as data queries become more complex.
 
-I chose to use the ORM approach for its simplicity and portability but may switch over to raw SQL in near future as data queries become more complex.
-
-Currently, the database only contains fake data until database structure is better optimized.
+Currently, the database only contains mock data until database structure is better optimized.
 
 **--Future Improvements--**
 
-To include geolocation mapping GUI, the ability to upload real content, data, and user account sign up / login features.
+The ability to upload real content, data, and user account sign up / login features.
 
 **API ENDPOINTS:**
 
