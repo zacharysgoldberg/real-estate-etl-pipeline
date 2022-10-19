@@ -2,7 +2,7 @@
 
 **--Description--**
 
-Stores and maps national emergencies/incidents, similar to Citizen. Users are able to submit tips related to emergencies/incidents as well as upload related video, image, and sound content.
+Extracts, parses, and stores crime data relating to anonymous tips, emergencies/incidents as well as video, image, and sound data.
 
 **--Design--**
 Initial design turned out to be too ambitous due to certain data points not being realistically attainable, such as, creating a table/column for users that maitnained a history of recent incidents/tips updates.
