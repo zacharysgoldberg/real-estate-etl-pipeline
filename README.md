@@ -7,11 +7,9 @@ Extracts, parses, and stores crime data relating to anonymous tips, emergencies/
 **--Design--**
 ORM was used  for its simplicity and portability but may switch over to raw SQL in near future as data queries become more complex.
 
-Currently, the database only contains mock data until database structure is better optimized.
-
 **--Future Improvements--**
 
-The ability to upload real content, data, and user account sign up / login features.
+Data visualization dashboard
 
 **API ENDPOINTS:**
 
