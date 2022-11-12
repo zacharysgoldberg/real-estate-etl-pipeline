@@ -5,6 +5,7 @@
 Extracts, parses, and stores crime data relating to anonymous tips, emergencies/incidents as well as video, image, and sound data.
 
 **--Design--**
+
 ORM was used  for its simplicity and portability but may switch over to raw SQL in near future as data queries become more complex.
 
 **--Future Improvements--**
