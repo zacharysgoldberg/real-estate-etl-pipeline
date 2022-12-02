@@ -1,0 +1,48 @@
+version: "3.9"
+services:
+  # web:
+  #   build: ./app
+  #   restart: always
+  #   volumes:
+  #     - ${PWD}/:/usr/app/web
+  #   expose:
+  #     - 5000
+  #   networks:
+  #     - default
+  #   depends_on:
+  #     - db
+
+  # nginx:
+  #   build: ./app/nginx
+  #   restart: always
+  #   volumes:
+  #     - ${PWD}/:/usr/app/nginx
+  #   ports:
+  #     - 8080:80
+  #   depends_on:
+  #     - web
+
+  db:
+    container_name: etl-db
+    image: postgres:14-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_DB: app-db
+      PGUSER: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - "${PWD}/app:app/src/data"
+
+  # db-test:
+  #   container_name: test-db
+  #   image: postgres:latest
+  #   restart: always
+  #   environment:
+  #     PGUSER: postgres
+  #     POSTGRES_DB: test-db
+  #     POSTGRES_HOST_AUTH_METHOD: trust
+  #   ports:
+  #     - 5433:5432

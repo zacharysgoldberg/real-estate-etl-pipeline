@@ -1,1 +1,9 @@
 venv
+instance/
+__pycache__/
+**.vscode
+**.env
+**seed.py
+Formula1-Project-Solutions/
+raw/
+**pg_admin

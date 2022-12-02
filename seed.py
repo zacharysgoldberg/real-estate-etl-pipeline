@@ -1,24 +1,25 @@
 """
-Populating emergency_map database with fake data using the SQLAlchemy ORM.
+Populating database with fake data using the SQLAlchemy ORM.
 """
 
-from emergency_map.src import create_app
-from emergency_map.src.api.models.models import User, Tip, Content, Location, Incident, users_tips, users_content, db
+from app.api import create_app
+from app.api.models.models import users, tips, content, locations, incidents, users_tips, users_content, db
 from faker import Faker
 import random
 import string
 import hashlib
 import secrets
-from emergency_map.src.data_sets import content_types, cities_states, incident_types
+from app.data_sets import content_types, cities_states, incident_types
 import sqlalchemy
 
-
+# fixed range of data to populate with
 USER_COUNT = 100
 CONTENT_COUNT = 75
 LIKE_CONTENT_COUNT = 300
 TIP_COUNT = 50
 INCIDENT_COUNT = 1000
 LOCATION_COUNT = len(cities_states)
+# explicitly used for random decsisions
 boolean = [True, False]
 
 
@@ -74,6 +75,7 @@ def main():
         id = random.randint(
             last_location.id - LOCATION_COUNT + 1, last_location.id)
         name = fake.name()
+        # new user
         last_user = User(
             full_name=name,
             username=name.split()[0].lower() + str(random.randint(1, 150)),
@@ -93,6 +95,7 @@ def main():
         # Choosing random city from list
         id = random.randint(
             last_location.id - LOCATION_COUNT + 1, last_location.id)
+        # new incident
         last_incident = Incident(
             coordinates=fake.coordinate(),
             city=db.session.query(Location.city).filter(Location.id == id),
@@ -119,6 +122,7 @@ def main():
             last_user.id - USER_COUNT + 1, last_user.id)
         anonymous = random.choice(boolean)
         city = random.choice(list(cities_states.keys()))
+        # new tip
         last_tip = Tip(
             # Randomly assigning if user decides to remain anonymous
             anonymous=False if anonymous == False else True,
@@ -155,6 +159,7 @@ def main():
     for _ in range(CONTENT_COUNT):
         id = random.randint(
             last_user.id - USER_COUNT + 1, last_user.id)
+        # new content
         last_content = Content(
             content_type=random.choice(content_types),
             filtered=random.choice(boolean),
@@ -166,6 +171,7 @@ def main():
     # insert content
     db.session.commit()
 
+# Populating many-to-many tables
     # Users_Content
     user_content_pairs = set()
     while len(user_content_pairs) < LIKE_CONTENT_COUNT:
