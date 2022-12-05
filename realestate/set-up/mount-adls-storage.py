@@ -59,4 +59,3 @@ dbutils.fs.ls(f"/mnt/{storage_account_name}/presentation")
 
 # COMMAND ----------
 
-
