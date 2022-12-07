@@ -7,7 +7,7 @@ Created a pipeline that utilizes both historical and current market data to clea
 
 **--Design--**
 
-- Built a production level architecture for a data engineering solution using Azure Databricks, Azure Data Lake Gen2, Azure Data Factory, and Power BI
+- Built a production level architecture for a data engineering solution using Azure Databricks, Azure Data Lake Gen2, Azure Data Factory, and PowerBI
 
 - Created, configured, and monitored Databricks clusters, cluster pools, and jobs
 
@@ -15,11 +15,9 @@ Created a pipeline that utilizes both historical and current market data to clea
 
 - Created dashboards to visualise the outputs
 
-- Connected to the Azure Databricks tables from PowerBI
-
 - PySpark for Ingestion of CSV files into the data lake as parquet files/ tables.
 
-- Spark SQL for creating databases, tables, views, and transformations such as Filter, Join, Simple Aggregations, GroupBy, Window functions
+- Spark SQL for creating databases, tables, views, and transformations such as Filter, Join, Simple Aggregations, GroupBy, Window functions, etc.
 
 - **Implemented full refresh and incremental load patterns using partitions**
 
@@ -27,15 +25,13 @@ Created a pipeline that utilizes both historical and current market data to clea
 
 - History, Time Travel, and Vacuum
 
-- Converting Parquet files to Delta files
+- Converted Parquet files to Delta files
 
 - Implemented incremental load pattern using delta lake
 
 - Created pipelines to execute Databricks notebooks
 
 - Designed robust pipelines to deal with unexpected scenarios such as missing files
-
-- Creating dependencies between activities as well as pipelines
 
 - Scheduled the pipelines using data factory triggers to execute at regular intervals
 
