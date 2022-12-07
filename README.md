@@ -3,7 +3,7 @@
 **--Description--**
 
 Ingested, transformed, and loaded real estate data from Zillow API.
-Created a pipeline by cleaning and structuring both raw historical and current market data for analyzing the potential return on real estate investment that each region would yield.
+Created a pipeline by cleaning and structuring raw historical and current market data for analyzing the potential return on real estate investment that each region would yield.
 
 **--Design--**
 
