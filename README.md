@@ -5,7 +5,7 @@
 Data Engineering project where I ingested, transformed, and loaded data from Zillow's realestate API into an ETL pipeline using various Azure services including Azure Databricks and Azure Data Factory.
 Created a pipeline by cleaning/ structuring raw historical and current market data for analyzing the potential return on real estate investment that each region would yield.
 
-**--Design--**
+## Design
 
 - Built a production level architecture for a data engineering solution using Azure Databricks, Azure Data Lake Gen2, Azure Data Factory, and PowerBI
 
@@ -37,7 +37,7 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 - Monitored the triggers/ pipelines to check for errors/ outputs.
 
-**--Future Improvements--**
+## Future Improvements
 
 Hosted Web app with real-time data streaming
 
