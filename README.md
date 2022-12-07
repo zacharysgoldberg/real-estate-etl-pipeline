@@ -37,8 +37,9 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 - Monitored the triggers/ pipelines to check for errors/ outputs.
 
+**--Demo--**
+
 ## Future Improvements
 
 Hosted Web app with real-time data streaming
 
-**--Demo--**
