@@ -2,47 +2,47 @@
 
 **--Description--**
 
+Ingested, transformed, and analyzed real estate data from Zillow API.
+Created a pipeline that utilizes both historical and current market data to clean, structure, and analyze the potential return on real estate investment that each region would yield.
+
 **--Design--**
+
+- Built a solution architecture for a data engineering solution using Azure Databricks, Azure Data Lake Gen2, Azure Data Factory, and Power BI
+
+- Created, configured, and monitored Databricks clusters, cluster pools, and jobs
+
+- Mounted Azure Storage in Databricks using secrets stored in Azure Key Vault
+
+- Created dashboards to visualise the outputs
+
+- Connected to the Azure Databricks tables from PowerBI
+
+- PySpark for Ingestion of CSV files into the data lake as parquet files/ tables.
+
+- Spark SQL for creating databases, tables, views, and transformations such as Filter, Join, Simple Aggregations, GroupBy, Window functions
+
+- **Implemented full refresh and incremental load patterns using partitions**
+
+- Read, Write, Update, Delete and Merge to delta lake using both PySpark as well as Spark SQL
+
+- History, Time Travel, and Vacuum
+
+- Converting Parquet files to Delta files
+
+- Implemented incremental load pattern using delta lake
+
+- Created pipelines to execute Databricks notebooks
+
+- Designed robust pipelines to deal with unexpected scenarios such as missing files
+
+- Creating dependencies between activities as well as pipelines
+
+- Scheduled the pipelines using data factory triggers to execute at regular intervals
+
+- Monitored the triggers/ pipelines to check for errors/ outputs.
 
 **--Future Improvements--**
 
-**API ENDPOINTS:**
+Hosted Web app with real-time data streaming
 
-| Endpoints, Users                    | Methods    | Parameters          | Action                         |
-| ----------------------------------- | ---------- | ------------------- | ------------------------------ |
-| /users                              | GET        | None                | List all users                 |
-| /users/int:id                       | GET        | user.id             | List a user                    |
-| /users/int:id/tips_submitted        | GET        | user.id             | List tips submitted by a user  |
-| /users/int:id/liked_content         | GET        | user.id             | List content that a user liked |
-| /users                              | POST       | None                | Creates a new user             |
-| /users/int:id/like                  | POST       | user.id             | Like content by a user         |
-| /users/int:id                       | PATCH, PUT | user.id             | Update user info               |
-| /users/int:id                       | DELETE     | user.id             | Delete a user                  |
-| /users/int:id/unlike/int:content_id | DELETE     | user.id, content.id | Unlike content by a user       |
-
-| Endpoints, Tips             | Methods | Parameters | Action                         |
-| --------------------------- | ------- | ---------- | ------------------------------ |
-| /tips                       | GET     | None       | List all tips                  |
-| /tips/int:id                | GET     | tip.id     | List a tip                     |
-| /tips/int:id/submitted_tips | GET     | tip.id     | List user that submitted a tip |
-| /tips                       | POST    | None       | Create/Submit a new tip        |
-| /tips/int:id                | DELETE  | user.id    | Delete a tip                   |
-
-| Endpoints, Content           | Methods    | Parameters | Action                               |
-| ---------------------------- | ---------- | ---------- | ------------------------------------ |
-| /content                     | GET        | None       | List all content                     |
-| /content/int:id              | GET        | content.id | List a content post                  |
-| /content/int:id/users_liking | GET        | content.id | List users that liked a content post |
-| /content                     | POST       | None       | Create a new content post            |
-| /content/int:id              | PATCH, PUT | content.id | Update a content post                |
-| /content/int:id              | DELETE     | content.id | Delete a content post                |
-
-| Endpoints, Incidents | Methods | Parameters  | Action             |
-| -------------------- | ------- | ----------- | ------------------ |
-| /incidents           | GET     | None        | List all incidents |
-| /incidents/int:id    | GET     | incident.id | List an incident   |
-
-| Endpoints, Locations | Methods | Parameters  | Action             |
-| -------------------- | ------- | ----------- | ------------------ |
-| /locations           | GET     | None        | List all locations |
-| /locations/int:id    | GET     | location.id | List a location    |
+**--Demo--**

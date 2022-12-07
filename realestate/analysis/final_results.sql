@@ -21,25 +21,25 @@ SHOW TABLES
 
 -- COMMAND ----------
 
-SELECT * FROM mean_yearly_results;
+SELECT * FROM final_results_w_growth;
 
 -- COMMAND ----------
 
-DROP TABLE IF EXISTS re_presentation.final_yearly_results;
-CREATE TABLE re_presentation.final_yearly_results
+DROP TABLE IF EXISTS re_presentation.final_results_for_viz;
+CREATE TABLE re_presentation.final_results_for_viz
 USING parquet
 AS
-SELECT id, SPLIT(region, ',')[0] city, TRIM(SPLIT(region, ',')[1]) state, size_rank, year, mean_home_value, mean_sale_price, data_source, created_at
-FROM mean_yearly_results
+SELECT id, SPLIT(region, ',')[0] city, TRIM(SPLIT(region, ',')[1]) state, size_rank, date, mean_home_value, median_sale_price, one_year_growth, data_source, created_at
+FROM final_results_w_growth
 WHERE size_rank != 0;
 
 -- COMMAND ----------
 
-SELECT * FROM final_yearly_results;
+SELECT * FROM final_results_for_viz;
 
 -- COMMAND ----------
 
-SELECT * FROM final_yearly_results
+SELECT * FROM final_results_for_viz
 WHERE state = 'CA';
 
 -- COMMAND ----------
