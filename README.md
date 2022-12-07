@@ -7,7 +7,7 @@ Created a pipeline that utilizes both historical and current market data to clea
 
 **--Design--**
 
-- Built a solution architecture for a data engineering solution using Azure Databricks, Azure Data Lake Gen2, Azure Data Factory, and Power BI
+- Built a production level architecture for a data engineering solution using Azure Databricks, Azure Data Lake Gen2, Azure Data Factory, and Power BI
 
 - Created, configured, and monitored Databricks clusters, cluster pools, and jobs
 
