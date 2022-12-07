@@ -2,8 +2,8 @@
 
 **--Description--**
 
-Ingested, transformed, and loaded real estate data from Zillow API.
-Created a pipeline by cleaning and structuring raw historical and current market data for analyzing the potential return on real estate investment that each region would yield.
+Data Engineering project where I ingested, transformed, and loaded real estate data from Zillow API into an ETL pipeline using various Azure services including Azure Databricks and Azure Data Factory.
+Created a pipeline by cleaning/ structuring raw historical and current market data for analyzing the potential return on real estate investment that each region would yield.
 
 **--Design--**
 
