@@ -19,15 +19,13 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 - Spark SQL for creating databases, tables, views, and transformations such as Filter, Join, Simple Aggregations, GroupBy, Window functions, etc.
 
-- **Implemented full refresh and incremental load patterns using partitions**
+- **Implemented Full Refresh and Incremental Load patterns using Partitions and Delta Lake**
 
-- Read, Write, Update, Delete and Merge to delta lake using both PySpark as well as Spark SQL
+- Used both PySpark as well as Spark SQL for Reading, Writing, Updating, Deleting and Merging data to Delta Lake 
 
-- History, Time Travel, and Vacuum
+- Utilized History, Time Travel, and Vacuum
 
 - Converted Parquet files to Delta files
-
-- Implemented incremental load pattern using delta lake
 
 - Created pipelines to execute Databricks notebooks
 
