@@ -86,11 +86,16 @@ display(home_growth_final_df)
 
 # COMMAND ----------
 
-overwrite_partition(home_growth_final_df, 're_processed', 'home_growth', 'date')
+# overwrite_partition(home_growth_final_df, 're_processed', 'home_growth', 'date')
 
 # COMMAND ----------
 
-display(spark.read.parquet(f"{processed_folder_path}/home_growth"))
+merge_condition = 'tgt.id = src.id AND tgt.date = src.date'
+merge_delta_data(home_growth_final_df, 're_processed', 'home_growth', processed_folder_path, merge_condition, 'date')
+
+# COMMAND ----------
+
+# display(spark.read.parquet(f"{processed_folder_path}/home_growth"))
 
 # COMMAND ----------
 
@@ -99,7 +104,11 @@ dbutils.notebook.exit("Success")
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC SELECT * FROM re_processed.home_growth;
+# MAGIC SELECT COUNT(id) FROM re_processed.home_growth;
+
+# COMMAND ----------
+
+# MAGIC %sql SHOW PARTITIONS re_processed.home_growth;
 
 # COMMAND ----------
 

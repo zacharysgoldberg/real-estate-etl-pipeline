@@ -66,19 +66,21 @@ df = df.select(sorted(df.columns, reverse=True))
 
 # COMMAND ----------
 
-display(df)
+# display(df)
 
 # COMMAND ----------
+
+# Split Dataframe
 
 home_value_df, sale_price_df = split_dataframe(df)
 
 # COMMAND ----------
 
-display(home_value_df)
+# display(home_value_df)
 
 # COMMAND ----------
 
-display(sale_price_df)
+# display(sale_price_df)
 
 # COMMAND ----------
 
@@ -86,11 +88,11 @@ home_value_df = mean_months_table(home_value_df, 'mean_home_value')
 
 # COMMAND ----------
 
-display(home_value_df)
+home_value_df = add_ingestion_date(home_value_df)
 
 # COMMAND ----------
 
-display(home_value_df.select(countDistinct('date')))
+home_value_df = home_value_df.withColumn("data_source", lit(v_data_source))
 
 # COMMAND ----------
 
@@ -98,25 +100,23 @@ sale_price_df = mean_months_table(sale_price_df, 'median_sale_price')
 
 # COMMAND ----------
 
+display(sale_price_df.select(countDistinct('date')))
+
+# COMMAND ----------
+
+sale_price_df = add_ingestion_date(sale_price_df)
+
+# COMMAND ----------
+
+sale_price_df = sale_price_df.withColumn("data_source", lit(v_data_source))
+
+# COMMAND ----------
+
+display(home_value_df)
+
+# COMMAND ----------
+
 display(sale_price_df)
-
-# COMMAND ----------
-
-final_df = home_value_df.alias('a')\
-.join(sale_price_df.alias('b'), home_value_df.id == sale_price_df.id)\
-.select('a.id', "a.region", "a.size_rank", "a.date", "a.mean_home_value", "b.median_sale_price")
-
-# COMMAND ----------
-
-final_df = add_ingestion_date(final_df)
-
-# COMMAND ----------
-
-finaL_df = final_df.select(final_df.id, final_df.region, final_df.size_rank, final_df.date, final_df.mean_home_value, final_df.median_sale_price, final_df.ingestion_date).withColumn("data_source", lit(v_data_source))
-
-# COMMAND ----------
-
-display(final_df)
 
 # COMMAND ----------
 
@@ -124,12 +124,20 @@ display(final_df)
 
 # COMMAND ----------
 
-overwrite_partition(final_df, 're_processed', 'final_results', 'date')
+# overwrite_partition(home_value_df, 're_processed', 'home_value', 'date')
 
 # COMMAND ----------
 
-# MAGIC %sql
-# MAGIC SELECT * FROM re_processed.final_results;
+merge_condition = 'tgt.id = src.id AND tgt.date = src.date'
+merge_delta_data(home_value_df, 're_processed', 'home_value', processed_folder_path, merge_condition, 'date')
+
+# COMMAND ----------
+
+# overwrite_partition(sale_price_df, 're_processed', 'sale_price', 'date')
+
+# COMMAND ----------
+
+merge_delta_data(sale_price_df, 're_processed', 'sale_price', processed_folder_path, merge_condition, 'date')
 
 # COMMAND ----------
 
@@ -141,9 +149,17 @@ dbutils.notebook.exit("Success")
 
 # COMMAND ----------
 
+# MAGIC %sql SHOW PARTITIONS re_processed.home_value;
+
+# COMMAND ----------
+
+# MAGIC %sql SHOW PARTITIONS re_processed.sale_price;
+
+# COMMAND ----------
+
 # MAGIC %sql
 # MAGIC SELECT date, COUNT(1) 
-# MAGIC FROM re_processed.final_results
+# MAGIC FROM re_processed.home_value
 # MAGIC GROUP BY date;
 
 # COMMAND ----------

@@ -1,13 +1,13 @@
 # Real Estate Data ETL
 
-**--Description--**
+## Description
 
-Ingested, transformed, and analyzed real estate data from Zillow API.
-Created a pipeline that utilizes both historical and current market data to clean, structure, and analyze the potential return on real estate investment that each region would yield.
+Ingested, transformed, and loaded data from Zillow's realestate API into an ETL pipeline using various Azure services including Azure Databricks and Azure Data Factory.
+Created a pipeline by cleaning/ structuring raw historical and current market data for analyzing the potential return on real estate investment that each region would yield.
 
-**--Design--**
+## Design
 
-- Built a solution architecture for a data engineering solution using Azure Databricks, Azure Data Lake Gen2, Azure Data Factory, and Power BI
+- Built a production level architecture for a data engineering solution using Azure Databricks, Azure Data Lake Gen2, Azure Data Factory, and PowerBI
 
 - Created, configured, and monitored Databricks clusters, cluster pools, and jobs
 
@@ -15,11 +15,9 @@ Created a pipeline that utilizes both historical and current market data to clea
 
 - Created dashboards to visualise the outputs
 
-- Connected to the Azure Databricks tables from PowerBI
-
 - PySpark for Ingestion of CSV files into the data lake as parquet files/ tables.
 
-- Spark SQL for creating databases, tables, views, and transformations such as Filter, Join, Simple Aggregations, GroupBy, Window functions
+- Spark SQL for creating databases, tables, views, and transformations such as Filter, Join, Simple Aggregations, GroupBy, Window functions, etc.
 
 - **Implemented full refresh and incremental load patterns using partitions**
 
@@ -27,7 +25,7 @@ Created a pipeline that utilizes both historical and current market data to clea
 
 - History, Time Travel, and Vacuum
 
-- Converting Parquet files to Delta files
+- Converted Parquet files to Delta files
 
 - Implemented incremental load pattern using delta lake
 
@@ -35,14 +33,12 @@ Created a pipeline that utilizes both historical and current market data to clea
 
 - Designed robust pipelines to deal with unexpected scenarios such as missing files
 
-- Creating dependencies between activities as well as pipelines
-
 - Scheduled the pipelines using data factory triggers to execute at regular intervals
 
 - Monitored the triggers/ pipelines to check for errors/ outputs.
 
-**--Future Improvements--**
+**--Demo--**
+
+## Future Improvements
 
 Hosted Web app with real-time data streaming
-
-**--Demo--**

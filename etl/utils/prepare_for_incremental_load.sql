@@ -4,7 +4,7 @@
 
 -- COMMAND ----------
 
-DROP TABLE IF EXISTS re_prrocessed CASCADE
+DROP DATABASE IF EXISTS re_processed CASCADE;
 
 -- COMMAND ----------
 
@@ -19,3 +19,6 @@ DROP DATABASE IF EXISTS re_presentation CASCADE;
 
 CREATE DATABASE IF NOT EXISTS re_presentation
 LOCATION "mnt/realestatedl/presentation";
+
+-- COMMAND ----------
+

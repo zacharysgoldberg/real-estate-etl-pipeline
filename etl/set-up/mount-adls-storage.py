@@ -52,6 +52,7 @@ dbutils.fs.ls(f"/mnt/{storage_account_name}/processed")
 
 # dbutils.fs.unmount('/mnt/realestatedl/raw')
 # dbutils.fs.unmount('/mnt/realestatedl/processed')
+# dbutils.fs.unmount('/mnt/realestatedl/presentation')
 
 # COMMAND ----------
 

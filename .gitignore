@@ -7,3 +7,5 @@ __pycache__/
 Formula1-Project-Solutions/
 raw/
 **pg_admin
+**erd.drawio
+**viz_data.py
