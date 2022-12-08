@@ -19,7 +19,7 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 - Spark SQL for creating databases, tables, views, and transformations such as Filter, Join, Simple Aggregations, GroupBy, Window functions, etc.
 
-- **Implemented Full Refresh and Incremental Load patterns using Partitions and Delta Lake**
+- **Implemented Full Refresh and Incremental Load patterns using Partitions and ADLS Delta Lake**
 
 - Used both PySpark as well as Spark SQL for Reading, Writing, Updating, Deleting and Merging data to Delta Lake 
 
