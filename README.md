@@ -43,4 +43,4 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 ## Future Improvements
 
-Scheduled real-time data ingestion
+Scheduled data ingestion
