@@ -41,4 +41,4 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 ## Future Improvements
 
-Hosted Web app with real-time data streaming
+Scheduled real-time data ingestion
