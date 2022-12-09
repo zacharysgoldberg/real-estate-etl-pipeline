@@ -15,7 +15,7 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 - Created dashboards to visualise the outputs
 
-- PySpark for Ingestion of CSV files into the data lake as delta files/ tables and Transformed for SQL analysis.
+- PySpark for Ingestion of CSV files into the data lake (ADLS) as delta files/ tables and Transformed for SQL analysis.
 
 - Spark SQL for creating databases, tables, and transformations such as Filter, Join, Simple Aggregations, GroupBy, Window functions, etc.
 
