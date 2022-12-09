@@ -35,6 +35,8 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 - Monitored the triggers/ pipelines to check for errors/ outputs.
 
+- Simple hosted Flask web app for viewing data report and some exploratory analsyis
+
 ## ETL Pipeline
 
 ![](etl_pipeline.png)
