@@ -17,7 +17,7 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 - PySpark for Ingestion of CSV files into the data lake as delta files/ tables and Transformed for SQL analysis.
 
-- Spark SQL for creating databases, tables, views, and transformations such as Filter, Join, Simple Aggregations, GroupBy, Window functions, etc.
+- Spark SQL for creating databases, tables, and transformations such as Filter, Join, Simple Aggregations, GroupBy, Window functions, etc.
 
 - **Implemented Full Refresh and Incremental Load patterns using Partitions and ADLS Delta Lake**
 
