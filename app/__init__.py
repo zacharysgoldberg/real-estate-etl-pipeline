@@ -1,4 +1,4 @@
-import os
+"""import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -22,4 +22,4 @@ def create_app():
     # from src.api.views import users
     # app.register_blueprint(users.bp)
 
-    return app
+    return app"""

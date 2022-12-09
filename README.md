@@ -2,12 +2,12 @@
 
 ## Description
 
-Ingested, transformed, and loaded data from Zillow's realestate API into an ETL pipeline using various Azure services including Azure Databricks and Azure Data Factory.
+Ingested, transformed, and loaded data from Zillow's real estate API into an ETL pipeline using various Azure services including Azure Databricks and Azure Data Factory.
 Created a pipeline by cleaning/ structuring raw historical and current market data for analyzing the potential return on real estate investment that each region would yield.
 
 ## Design
 
-- Built a production level architecture for a data engineering solution using Azure Databricks, Azure Data Lake Gen2, Azure Data Factory, and PowerBI
+- Built a production level architecture for a Data Engineering solution using Azure Databricks, Azure Data Lake Gen2, Azure Data Factory, and PowerBI
 
 - Created, configured, and monitored Databricks clusters, cluster pools, and jobs
 
@@ -19,15 +19,13 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 - Spark SQL for creating databases, tables, views, and transformations such as Filter, Join, Simple Aggregations, GroupBy, Window functions, etc.
 
-- **Implemented full refresh and incremental load patterns using partitions**
+- **Implemented Full Refresh and Incremental Load patterns using Partitions and ADLS Delta Lake**
 
-- Read, Write, Update, Delete and Merge to delta lake using both PySpark as well as Spark SQL
+- Used both PySpark as well as Spark SQL for Reading, Writing, Updating, Deleting and Merging data to Delta Lake
 
-- History, Time Travel, and Vacuum
+- Utilized History, Time Travel, and Vacuum
 
 - Converted Parquet files to Delta files
-
-- Implemented incremental load pattern using delta lake
 
 - Created pipelines to execute Databricks notebooks
 
@@ -37,7 +35,9 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 - Monitored the triggers/ pipelines to check for errors/ outputs.
 
-**--Demo--**
+## ETL Pipeline
+
+![](etl_pipeline.png)
 
 ## Future Improvements
 
