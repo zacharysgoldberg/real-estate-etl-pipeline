@@ -9,10 +9,14 @@ app = Flask(__name__, template_folder='templates')
 def index():
     return redirect(url_for('analysis'))
 
+# [power bi report]
+
 
 @app.route('/data-table', methods=['GET'])
 def data_table():
     return
+
+# [sql and power bi analysis]
 
 
 @app.route('/analysis', methods=['GET'])

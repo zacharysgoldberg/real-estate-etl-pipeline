@@ -9,3 +9,4 @@ raw/
 **pg_admin
 **data_viz.py
 **etl_pipeline.drawio
+**docker-compose.yml
