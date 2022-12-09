@@ -43,4 +43,4 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 ## Future Improvements
 
-Scheduled data ingestion
+Scheduled data ingestion using ADF triggers
