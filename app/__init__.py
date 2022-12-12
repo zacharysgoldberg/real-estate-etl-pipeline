@@ -1,25 +1,16 @@
-"""import os
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
+import os
+from dotenv import load_dotenv
+from sqlalchemy import *
+from sqlalchemy.engine import create_engine
+from sqlalchemy.orm import sessionmaker
 
 
-db = SQLAlchemy()
+load = load_dotenv()
 
+engine = create_engine(os.getenv("DATABRICKS_URL"),
+                       connect_args={"http_path": os.getenv("HTTP_PATH")},
+                       )
 
-def create_app():
-    app = Flask(__name__, instance_relative_config=True)
-    app.config.from_mapping(
-        SECRET_KEY='dev',
-        SQLALCHEMY_DATABASE_URI='postgresql://postgres@localhost/etl-db',
-        SQLALCHEMY_TRACK_MODIFICATIONS=False,
-        SQLALCHEMY_ECHO=True
-    )
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-    db.init_app(app)
-    migrate = Migrate(app, db)
-
-    # from src.api.views import users
-    # app.register_blueprint(users.bp)
-
-    return app"""
+session = SessionLocal()
