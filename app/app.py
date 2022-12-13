@@ -1,39 +1,16 @@
 import os
-from flask import Flask, render_template, redirect, url_for, jsonify, request
-from .models import FinalResults
-from . import session
-from .utils.common_functions import accelerated_query
-from azure.storage.blob import BlobServiceClient
-import logging
+from flask import Flask, render_template
+
 
 app = Flask(__name__, template_folder='src/templates')
+
+
+# [home]
 
 
 @app.route('/')
 def index():
     return render_template('base.html')
-
-# TODO: Get data based on user search criteria/keywords or provide filtered selection options
-
-
-@app.route('/market-data', methods=['GET', 'POST'])
-def get_market_data():
-    if request.method == 'POST':
-        city = request.form['city']
-        state = request.form['state']
-        # date = request.form['date']
-
-        query = "SELECT * FROM BlobStorage WHERE region='Oxnard, CA' AND date='2020-12-31'"
-
-        # results = session.query(FinalResults)\
-        #     .filter(FinalResults.city.like(f'%{city}%'),
-        #             FinalResults.state.like(f'%{state}%'))\
-        #     .all()
-
-        results = accelerated_query(blob_client=BlobServiceClient, query=query)
-        logging.warning(results)
-
-        return render_template('market-data.html', results=results)
 
 # [end of year report]
 
