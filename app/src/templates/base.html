@@ -22,7 +22,7 @@
         <body>
             <nav class="navbar navbar-expand-lg bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Real Estate Data ETL Report</a>
+                    <a class="navbar-brand" href="/" method="GET">Real Estate Data ETL Report</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -54,6 +54,16 @@
                 <button style="margin-top:30px;margin-left:140px;" class="btn btn-primary" type="submit">
                     Get Market Data
                 </button>
+                {% if results %}
+                <div class="alert alert-success" role="alert">
+                    {{msg}}
+                </div>
+                {% else %}
+                <div class="alert alert-danger" role="alert">
+                    {{msg}}
+                </div>
+                {% endif %}
+
             </div>
         </form>
     </div>

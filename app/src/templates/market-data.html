@@ -4,7 +4,7 @@
 <div class="container">
     <div class="card text-center">
         <div class="card-body">
-            <table class="table table-striped table-bordered table-sm">
+            <table class="table table-bordered table-sm">
                 <thead>
                     <tr>
                         <th scope="col">City</th>
@@ -23,8 +23,8 @@
                         <td> {{ result.state}} </td>
                         <td> {{ result.size_rank }} </td>
                         <td> {{ result.date }} </td>
-                        <td> {{ result.mean_home_value|round(2) }} </td>
-                        <td> {{ result.median_sale_price|round(2) }} </td>
+                        <td> {{ result.mean_home_value }}</td>
+                        <td> {{ result.mean_sale_price }}</td>
                         <td> {{ result.one_year_growth }} </td>
                     </tr>
                     {% endfor %}
