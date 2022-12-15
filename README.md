@@ -39,7 +39,7 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 ## ETL Pipeline
 
-![](etl_pipeline_img.png)
+![](etl_pipeline.png)
 
 ## Future Improvements
 
