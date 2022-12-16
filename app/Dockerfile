@@ -1,7 +1,6 @@
-# For more information, please refer to https://aka.ms/vscode-docker-python
 FROM python:3.9
 
-RUN sudo apt-get update && sudo apt-get upgrade -y
+RUN apt-get update && apt-get upgrade -y
 
 EXPOSE 8000
 

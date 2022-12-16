@@ -1,6 +1,6 @@
-from flask import Blueprint, jsonify, request, render_template
+from flask import Blueprint, request, render_template
 from ..models import Result, db
-import logging
+# import logging
 
 bp = Blueprint('market_data', __name__, url_prefix='/market-data')
 
@@ -18,12 +18,15 @@ def get_market_data():
             results = db.session.query(Result)\
                 .filter(Result.city.like(f"%{city}%"),
                         Result.state.like(f"%{state}%"),
-                        Result.date.like(f"%{date}%"))\
+                        Result.date.like(f"{date[0:4]}%"))\
+                .order_by(Result.date.desc())\
                 .all()
-            msg = "Here are your results"
+            msg = "Results"
+            return render_template('market-data.html', results=results, msg=msg)
+
         else:
             results = []
-            msg = 'Must enter at least a city, state, or date...'
+            error = 'Enter at least a city, state, or date'
             # logging.warning("=====================================================")
 
-        return render_template('market-data.html', results=results, msg=msg)
+            return render_template('market-data.html', results=results, error=error)
