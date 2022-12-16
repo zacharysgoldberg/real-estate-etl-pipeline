@@ -8,7 +8,7 @@ Created a pipeline by cleaning raw historical and current market data for analyz
 
 ## Design
 
-- Built a production level architecture for a Data Engineering solution using Azure Databricks for data cleaning, Azure Data Lake Gen2 for blob storage, and Azure Data Factory for orchestrating ETL pipeline
+- Built a production level architecture for a Data Engineering solution using Azure Databricks for data cleaning, Azure Data Lake Gen2 for blob storage, and Azure Data Factory for orchestrating the ETL pipeline
 
 - Created, configured, and monitored Databricks clusters, cluster pools, and jobs
 
