@@ -1,2 +1,0 @@
-dockerfilePath: ./sub/app/Dockerfile
-dockerContext: ./sub/app
