@@ -1,10 +1,10 @@
 from flask import Flask
 from dotenv import load_dotenv
 from .models import db
-import urllib.parse
 from .routers import market_data
 import os
 # import pyodbc
+# import urllib.parse
 # import logging
 
 load = load_dotenv()
