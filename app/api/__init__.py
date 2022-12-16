@@ -12,7 +12,7 @@ load = load_dotenv()
 
 def create_app():
     app = Flask(__name__, template_folder='src/templates')
-    # [For pyodbc driver]
+    # [For odbc driver]
     # drivers = [item for item in pyodbc.drivers()]
     # logging.warning(drivers)
     # params = urllib.parse.quote_plus(

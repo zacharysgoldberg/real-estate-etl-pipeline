@@ -9,7 +9,7 @@ itsdangerous==2.1.2
 Jinja2==3.1.2
 MarkupSafe==2.1.1
 pymssql==2.2.7
-pyodbc==4.0.35
+# pyodbc==4.0.35
 python-dotenv==0.21.0
 SQLAlchemy==1.4.45
 Werkzeug==2.2.2
