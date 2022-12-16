@@ -31,9 +31,7 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 - Designed robust pipelines to deal with unexpected scenarios such as missing files
 
-- Scheduled the pipelines using data factory triggers to execute at regular intervals
-
-- Monitored the triggers/ pipelines to check for errors/ outputs.
+- Migrated Databricks CSV tables into Azure SQL database for user-facing queries
 
 - Hosted simple Flask application for viewing data report and some exploratory analsyis through Azure SQL database
 
@@ -43,13 +41,19 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 ## Data Factory Pipeline
 
-1.  ![Ingestion Files](images/adf-ingestion-files.jpg)
-    ![Ingestion ](images/adf-ingestion.jpg)
+### Ingestion
 
-2.  ![Transformation Files](images/adf-transformation-files.jpg)
-    ![Transformation](images/adf-transformation.jpg)
+![Ingestion Files](images/adf-ingestion-files.jpg)
+![Ingestion ](images/adf-ingestion.jpg)
 
-3.  ![Main Process](images/adf-main-process.jpg)
+### Transformation
+
+![Transformation Files](images/adf-transformation-files.jpg)
+![Transformation](images/adf-transformation.jpg)
+
+### Main Process
+
+![Main Process](images/adf-main-process.jpg)
 
 ## Future Improvements
 
