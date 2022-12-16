@@ -20,6 +20,6 @@ RUN python -m pip install -r requirements.txt
 WORKDIR /app
 COPY . /app
 
-RUN ["--mount=type=secret", "id=_env", "dst=/etc/secrets/.env"]
+RUN --mount=type=secret,id=_env,dst=/etc/secrets/.env
 
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app:app"]
