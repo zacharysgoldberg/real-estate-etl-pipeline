@@ -33,7 +33,7 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 - Migrated Databricks CSV tables into Azure SQL database for user-facing queries
 
-- Hosted simple Flask application for viewing data report and some exploratory analsyis through Azure SQL database
+- Hosted simple Flask application for viewing data reports and some exploratory analsyis through Azure SQL database
 
 ## ETL Flow Chart
 
