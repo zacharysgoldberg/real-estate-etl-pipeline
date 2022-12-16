@@ -1,2 +1,2 @@
-dockerfilePath: ./app/Dockerfile
-dockerContext: ./app/api
+dockerfilePath: ./sub/app/Dockerfile
+dockerContext: ./sub/app
