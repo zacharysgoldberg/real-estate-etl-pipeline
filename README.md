@@ -31,11 +31,9 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 - Designed robust pipelines to deal with unexpected scenarios such as missing files
 
-- Scheduled the pipelines using data factory triggers to execute at regular intervals
+- Migrated Databricks CSV tables into Azure SQL database for user-facing queries
 
-- Monitored the triggers/ pipelines to check for errors/ outputs.
-
-- Hosted simple Flask application for viewing data report and some exploratory analsyis through Azure SQL database
+- Hosted simple Flask application for viewing data reports and some exploratory analsyis through Azure SQL database
 
 ## ETL Flow Chart
 
