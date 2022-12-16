@@ -23,7 +23,7 @@ def create_app():
     app.config.from_mapping(
         SECRET_KEY='dev',
         # SQLALCHEMY_DATABASE_URI=f'mssql+pyodbc:///?odbc_connect={params}',
-        SQLALCHEMY_DATABASE_URI=f"mssql+pymssql://{os.getenv('DB_USER')}@{os.getenv('DB_SERVER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}/{os.getenv('DB_NAME')}",
+        SQLALCHEMY_DATABASE_URI=f"mssql+pymssql://{os.getenv('DB_USER')}@realestate-etl-server:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}/{os.getenv('DB_NAME')}",
         SQLALCHEMY_TRACK_MODIFICATIONS=False,
         SQLALCHEMY_ECHO=True
     )
