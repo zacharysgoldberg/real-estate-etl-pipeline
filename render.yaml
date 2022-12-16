@@ -1,0 +1,2 @@
+dockerfilePath: ./app/Dockerfile
+dockerContext: ./app/api
