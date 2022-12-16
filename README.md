@@ -37,9 +37,19 @@ Created a pipeline by cleaning/ structuring raw historical and current market da
 
 - Hosted simple Flask application for viewing data report and some exploratory analsyis through Azure SQL database
 
-## ETL Pipeline
+## ETL Flow Chart
 
-![](etl-pipeline.png)
+![](images/etl-pipeline.png)
+
+## Data Factory Pipeline
+
+1.  ![Ingestion Files](images/adf-ingestion-files.jpg)
+    ![Ingestion ](images/adf-ingestion.jpg)
+
+2.  ![Transformation Files](images/adf-transformation-files.jpg)
+    ![Transformation](images/adf-transformation.jpg)
+
+3.  ![Main Process](images/adf-main-process.jpg)
 
 ## Future Improvements
 
