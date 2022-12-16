@@ -32,7 +32,7 @@ Created a pipeline by cleaning raw historical and current market data for analyz
 
 - Designed robust pipelines to deal with unexpected scenarios such as missing files
 
-- Migrated Databricks CSV tables into Azure SQL database for user-facing queries
+- Migrated Databricks CSV tables over to Azure SQL database for user-facing queries
 
 - Hosted simple Flask application for viewing data reports and some exploratory analsyis through Azure SQL Server
 
