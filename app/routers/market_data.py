@@ -1,5 +1,5 @@
 from flask import Blueprint, request, render_template
-from ..models import Result, db
+from models import Result, db
 # import logging
 
 bp = Blueprint('market_data', __name__, url_prefix='/market-data')

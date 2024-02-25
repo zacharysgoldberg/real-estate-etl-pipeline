@@ -15,8 +15,9 @@ RUN pip install --upgrade pip
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
 
-WORKDIR /
-COPY . /
+# WORKDIR /app
+# Copy the entire project into the container
+COPY . .
 
 # "--bind", "0.0.0.0:8000",
-CMD ["gunicorn", "app:app", "-w", "2"]
+CMD ["gunicorn", "app:app", "-w", "2", "-b", "0.0.0.0:8000"]
