@@ -15,8 +15,8 @@ RUN pip install --upgrade pip
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
 
-WORKDIR /app
-COPY . /app
+WORKDIR /
+COPY . /
 
 # "--bind", "0.0.0.0:8000",
 CMD ["gunicorn", "app:app", "-w", "2"]
