@@ -1,5 +1,4 @@
 venv
-virtenv
 instance/
 __pycache__/
 **.vscode
