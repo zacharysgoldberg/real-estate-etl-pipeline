@@ -36,7 +36,7 @@ Created a pipeline by cleaning raw historical and current market data for analyz
 
 - Hosted simple Flask application for viewing data reports and some exploratory analsyis through Azure SQL Server
 
-## Hosted with Render
+## Live link
 
 [https://real-estate-data-etl.onrender.com/](https://real-estate-data-etl.onrender.com/)
 
